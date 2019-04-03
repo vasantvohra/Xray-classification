@@ -52,7 +52,7 @@ def upload_file():
         os.remove(UPLOAD_FOLDER+"/"+file.filename)
         
 if __name__ == '__main__':
-	app.run(debug=True) #host="0.0.0.0"
+	app.run(debug=True, port = int(os.environ.get('PORT', 5000))) #host="0.0.0.0"
 #app.run(threaded=True,debug=True)
 
 
