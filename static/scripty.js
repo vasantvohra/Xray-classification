@@ -69,7 +69,7 @@ $(function() {
 // console.log(params);
 //
 //         $.ajax({
-//             url: "/api/ocr",
+//             url: "/",
 //             type: "POST",
 //             data: params,
 //             async: false,
@@ -95,7 +95,7 @@ $(function() {
 
         $.ajax({
      type: 'POST',
-     url: '/api/ocr',
+     url: '/',
      data: formData,
      processData: false,
      contentType: false ,

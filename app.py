@@ -16,9 +16,7 @@ def index():
 
 @app.route('/api/ocr', methods=['POST','GET'])
 def upload_file():
-    if request.method == "GET":
-        return "This is the api "
-    elif request.method == "POST":
+    if request.method == "POST":
         file = request.files['image']
 
         f = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
@@ -28,7 +26,7 @@ def upload_file():
         print(file.filename)
 
         image = cv2.imread(UPLOAD_FOLDER+"/"+file.filename)
-        #os.remove(UPLOAD_FOLDER+"/"+file.filename)
+        #
         filename = "{}.png".format(os.getpid())
         cv2.imwrite(filename, image)
         print(filename)
@@ -51,7 +49,10 @@ def upload_file():
         text= text+"\t"+ str(d)+'\n'+"Filename: \t"+str(file.filename)
         print("Classification :\n",text)
         return jsonify({"text" : text})
-
-app.run(threaded=True,debug=True)
+        os.remove(UPLOAD_FOLDER+"/"+file.filename)
+        
+if __name__ == '__main__':
+	app.run(debug=True) #host="0.0.0.0"
+#app.run(threaded=True,debug=True)
 
 
