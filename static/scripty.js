@@ -95,7 +95,7 @@ $(function() {
 
         $.ajax({
      type: 'POST',
-     url: '/',
+     url: '/api/ocr',
      data: formData,
      processData: false,
      contentType: false ,
