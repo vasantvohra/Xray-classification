@@ -132,18 +132,24 @@ $(function() {
 });
 
     $('#show_api').click(function () {
-        var newtext = " you may submit your Prescription for electronic medical records ";
+        var newtext = " You may submit your Prescription for Electronic Medical Records under your Username ";
         var obj  = $('#chntxt').text(newtext);
         obj.html(obj.html().replace(/\n/g,'<br/>'));
         obj.html(obj.html().replace(/Cs/g,'<code>'));
         obj.html(obj.html().replace(/CC/g,'<code/>'));
     });
 	$('#show_api2').click(function () {
-        var newtext = " Now you can calssify between Normal & Diabetic Retina ";
+        var newtext = " Upload an Image to classify between Normal & Diabetic Retina ";
         var obj  = $('#chntxt').text(newtext);
         obj.html(obj.html().replace(/\n/g,'<br/>'));
         obj.html(obj.html().replace(/Cs/g,'<code>'));
         obj.html(obj.html().replace(/CC/g,'<code/>'));
     });
-
+	$('#show_api3').click(function () {
+        var newtext = " Upload an Image to classify between Normal & Pneumonia ";
+        var obj  = $('#chntxt').text(newtext);
+        obj.html(obj.html().replace(/\n/g,'<br/>'));
+        obj.html(obj.html().replace(/Cs/g,'<code>'));
+        obj.html(obj.html().replace(/CC/g,'<code/>'));
+    });
 });
