@@ -132,7 +132,14 @@ $(function() {
 });
 
     $('#show_api').click(function () {
-        var newtext = " Api end point \nCscurl -i -X POST -F files=@test.png http://127.0.0.1:5000/api/ocrCC";
+        var newtext = " you may submit your Prescription for electronic medical records ";
+        var obj  = $('#chntxt').text(newtext);
+        obj.html(obj.html().replace(/\n/g,'<br/>'));
+        obj.html(obj.html().replace(/Cs/g,'<code>'));
+        obj.html(obj.html().replace(/CC/g,'<code/>'));
+    });
+	$('#show_api2').click(function () {
+        var newtext = " Now you can calssify between Normal & Diabetic Retina ";
         var obj  = $('#chntxt').text(newtext);
         obj.html(obj.html().replace(/\n/g,'<br/>'));
         obj.html(obj.html().replace(/Cs/g,'<code>'));
