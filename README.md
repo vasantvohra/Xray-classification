@@ -6,5 +6,5 @@
     - Penumonia or No Pneumonia
     
 Credits-
-  - Tressract OCR Flask app
+  - Tesseract OCR Flask app
   - Link: 
